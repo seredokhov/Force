@@ -1,0 +1,350 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #f6f6f6;
+}
+input,
+button {
+	border: none;
+	outline: none;
+}
+
+
+
+/*     Шапка     */
+body > header {
+	background-color: #f6f6f6;
+	position: relative;
+	z-index: 10;
+};
+/* Верхняя шапка */
+.upper_header {
+	padding: 0;
+}
+.upper_header > div {
+	min-height: 54px;
+}
+.social span {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-color: #eeeeee;
+	margin-right: 7px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	text-align: center;
+	line-height: 25px;
+}
+.social i {
+	font-size: 15px;
+	color: #a4a4a4;
+}
+.header_nav {
+	line-height: 50px;
+	margin: 0;
+}
+.header_nav li {
+	display: inline-block;
+	position: relative;
+}
+.header_nav > li > a,
+.dropdown-menu li a {
+	color: #747474;
+	text-decoration: none;
+	font-size: 12px;
+	margin: 0 25px;
+}
+.dropdown-menu li a {
+	margin: 0;
+}
+.dropdown-menu li a:hover,
+.menu > ul > li:hover a[data-toggle] {
+	color: #ff7300;
+}
+.header_nav a:hover {
+	color: #ff7300;
+	text-decoration: none;
+}
+.header_nav a:hover span {
+	border-bottom: 1px solid #ff7300;
+}
+.header_nav a i {
+	margin-left: 5px;
+	font-size: 17px;
+	position: relative;
+	top: 2px;
+	transition: all 0.2s linear;
+}
+.header_nav a[aria-expanded="true"] {
+	color: #ff7300;
+}
+.header_nav a[aria-expanded="true"] i {
+	transform: rotate(180deg);
+}
+.header_nav .dropdown-menu {
+	min-width: 220px;
+	border-radius: 0;
+	top: 50px;
+	left: -25%;
+	border: none;
+	line-height: normal;
+	background: #eeeeee;
+	box-shadow: none;
+	border: 1px solid #ccc;
+}
+.header_nav .dropdown-menu:before {
+	content: "";
+	border: 20px solid transparent;	
+	border-bottom: 5px solid #ccc;
+	position: absolute;
+	top: -25px;
+	left: calc(50% - 20px)
+}
+.header_nav .dropdown-menu:after {
+	content: "";
+	border: 20px solid transparent;	
+	border-bottom: 5px solid #eee;
+	position: absolute;
+	top: -24px;
+	left: calc(50% - 20px)
+}
+.header_nav .dropdown-menu li {
+	display: block;
+	line-height: 1;
+	margin: 5px 0;
+}
+/*
+span.fb {
+	background: url('../images/social.png') 5px 4px no-repeat #eeeeee; 
+}
+span.ok {
+	background: url('../images/social.png') -26px 4px no-repeat #eeeeee; 
+}
+span.twit {
+	background: url('../images/social.png') -56px 4px no-repeat #eeeeee; 
+}
+span.gogl {
+	background: url('../images/social.png') -88px 4px no-repeat #eeeeee; 
+}
+.header_nav {
+	line-height: 54px;
+}*/
+
+/* Нижняя шапка */
+.lower_header {
+	background-color: #ff7300;
+	margin-bottom: 12px;
+}
+.lower_header .container {
+	min-height: 65px;
+	padding: 0;
+}
+.lower_header .container > div {
+	padding-top: 12.5px;
+	padding-bottom: 12.5px;
+}
+.logo {
+	display: block;
+	margin: 4px 0;
+}
+.search {
+	position: relative;
+}
+.search input,
+.search button,
+.header_links a  {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	height: 40px;
+	background-color: #fff;
+}
+.search button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	border-bottom: 4px solid #ddd;
+}
+.header_links a {
+	padding: 8px 0;
+	margin: 0 6px;
+	text-decoration: none;
+	display: inline-block;
+	width: 45%;
+	color: #3b3b3b;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 4px solid #ddd;
+	text-align: center;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+a.where i,
+a.cart i,
+.search button i,
+.header_contacts i {
+	margin-right: 5px;
+	color: #a4a4a4;
+	font-size: 15px;
+}
+.search button i {
+	margin: 0;
+}
+.header_contacts {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 14px;
+	color: #3b3b3b;
+}
+.header_contacts i {
+	margin-right: 15px;
+}
+.header_contacts i.fa-map-marker {
+	margin-right: 20px;
+}
+.header_contacts span {
+	color: #747474;
+	font-size: 11px;
+}
+
+/*    Под снос    */
+
+/*
+.header_links a.cart:before,
+.header_links a.where:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 5px;
+	background: url('../images/cart.png') no-repeat center;
+}
+.header_links a.where:before {
+	background-image: url('../images/nav.png');
+}*/
+
+
+
+/*       Центральный блок         */
+
+	/*Боковое меню*/
+	.menu {
+		background: #ffffff;
+		width: 100%;
+		border: 1px solid #dddddd;
+		position: relative;
+		z-index: 10
+	}
+	.menu > ul,
+	ul.dropdown-menu {
+		list-style: none;
+		margin-bottom: 0;
+	}
+	.menu > ul li {
+		border-bottom: 1px solid #dddddd;
+		position: relative;
+	}
+	.menu > ul li a,
+	ul.dropdown-menu li a {
+		font-size: 13px;
+		color: #454545;
+		padding: 10px 15px;
+		padding-left: 30px;
+		display: block;
+		background: transparent;
+		text-decoration: none;
+	}
+	.menu > ul li:last-child {
+		border-bottom: none;
+	}
+	.menu > ul li,
+	ul.dropdown-menu li {
+		background: url("../images/list-style.png") no-repeat 15px center;
+		padding: 0;
+	}
+	.menu > ul li:hover,
+	ul.dropdown-menu li:hover {
+		background: url("../images/list-style-active.png") no-repeat 15px center;
+	}
+	.menu > ul > li:hover > .dropdown-menu { 
+		display: block !important;
+	} 
+	.menu_drop {
+		top: -1px;
+		left: calc(100% + 7px);
+		margin: 0;
+		min-width: 315px;
+		min-height: 155px;
+		border: 1px solid #dddddd;
+	}
+	.menu_drop:before {
+		content: "";
+		border: 20px solid transparent;	
+		border-right: 5px solid #dddddd;
+		position: absolute;
+		top: 0;
+		left: -25px;
+	}
+	.menu_drop:after {
+		content: "";
+		border: 20px solid transparent;	
+		border-right: 5px solid #fff;
+		position: absolute;
+		top: 0;
+		left: -24px;
+	}
+	.menu_drop > ul {
+		list-style: none;
+	}
+	.menu_drop > ul li {
+		border-bottom: 0;
+	}
+	.menu_drop > ul li a {
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+
+
+
+
+	/* Контент */
+	.content .item {
+		display: inline-block;
+		background-color: #fff;
+	}
+	#owl-demo .item img{
+	    display: block;
+	    width: 100%;
+	    height: auto;
+	}
+
+
+	.wrapper {
+		display: none;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0, 0.3);
+		z-index: 1;
+	}
+	.ff {
+
+	}
+	.display {
+		display: block;
+	}
+
+
+
+
+
+
+
+	/*  Медиа запросы  */
