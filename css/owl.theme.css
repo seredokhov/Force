@@ -8,6 +8,7 @@
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	height: 40px;
 }
 
 /* Styling Next and Prev buttons */
@@ -15,23 +16,23 @@
 .owl-theme .owl-controls .owl-buttons div{
 	color: #FFF;
 	position: absolute;
-	bottom: 89px;
+	bottom: 0;
 	display: inline-block;
-	width: 37px;
-	height: 77px;
+	width: 80px;
+	height: 246.3px;
 	font-size: 12px;
 }
 .owl-theme .owl-controls .owl-buttons div:hover {
-	background-color: #86c520;
+	background-color: rgba(0,0,0, 0.6);
 }
 .owl-next {
-	right: -5px;
-	 background: url('../images/arrow_right.png') no-repeat 50% 50% #c3c3c3;
+	right: 0;
+	 background: url('../images/arrow_right.png') no-repeat 50% 50%;
 }
 
 .owl-prev {
-	left: -5px;
-	background: url('../images/arrow_left.png') no-repeat 50% 50% #c3c3c3;
+	left: 0;
+	background: url('../images/arrow_left.png') no-repeat 50% 50%;
 }
 
 /* Clickable class fix problem with hover on touch devices */
@@ -51,23 +52,21 @@
 }
 .owl-theme .owl-controls .owl-page span{
 	display: block;
-	width: 14px;
-	height: 14px;
+	width: 10px;
+	height: 10px;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
-	border: 2px solid #000;
+	border: 1px solid #000;
 	border-color: rgba(0,0,0, 0.5);
 	background: #fff;
 }
 
 .owl-theme .owl-controls .owl-page.active span{
-	width: 22px;
-	height: 22px;
-	border: 2px solid;
+	border: 1px solid;
 	border-color: rgba(0,0,0, 0.5);
-	background: #94c510;
+	background: #ff7300;
 }
 
 /* If PaginationNumbers is true */
