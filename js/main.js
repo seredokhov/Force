@@ -6,10 +6,10 @@ if($(document).width() > 992)  {
 	/*  Затемнение  */
 	$(function() {
 		$menu.mouseenter(function(){
-			$wrap.fadeIn(200);
+			$wrap.stop().fadeIn(200);
 		})
 		$menu.mouseleave(function(){
-			$wrap.fadeOut(200);
+			$wrap.stop().fadeOut(200);
 		})
 	});
 	/*   Скролл  */
@@ -79,17 +79,40 @@ $(function () {
 /*  Выравнивание выпадающего меню в шапке */
 
 $(function (){
-	$('.header_nav > li > a').click(function(){
+	var headerLink = $('.header_nav > li > a')
+	headerLink.click(function(){
 		var linkWidth = $(this).parent().css('width');
 		var offsetLeft = (220 - parseInt(linkWidth)) / 2;
 		$(this).parent().find('ul').css('left', -offsetLeft);
 	});
 });
-/*
-$(function () {
-  var W = $('.header_nav li').css('width');
-  alert(W);
-});
-*/
 
+/*   Ресайз блоков   */
+var table = $('#table');
+var rows = $('#rows');
+var items = $('#item_block').find('article');
+
+rows.click(function(){	
+	if(!items.hasClass("resize")) {
+		$(this).addClass('active');
+		table.removeClass('active');
+		items.animate({opacity:0}, '200', function(){
+			items.addClass('resize')
+		}).animate({opacity:1}, '200', function(){
+			items.removeAttr("style")
+		});
+	}
+})
+
+table.click(function(){
+	if(items.hasClass("resize")) {
+		$(this).addClass('active');
+		rows.removeClass('active');
+		items.animate({opacity:0}, '200', function(){
+			items.removeClass('resize')
+		}).animate({opacity:1}, '200', function(){
+			items.removeAttr("style")
+		});
+	}
+})
 
