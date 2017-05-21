@@ -65,12 +65,14 @@ header .container {
 	text-decoration: none;
 	font-size: 12px;
 }
-.dropdown-menu li a {
+.dropdown-menu li a,
+.menu_drop li a{
 	margin: 0;
 }
 
 .dropdown-menu li a:hover,
-.menu > ul > li:hover a[data-toggle] {
+.menu_drop li a:hover,
+.menu > ul > li:hover > a {
 	color: #ff7300;
 }
 .header_nav a:hover {
@@ -333,6 +335,7 @@ a.cart i,
 	ul.dropdown-menu li {
 		background: url("../images/list-style.png") no-repeat 15px center;
 		padding: 0;
+		cursor: pointer;
 	}
 	.menu > ul li:hover,
 	ul.dropdown-menu li:hover {
@@ -350,7 +353,13 @@ a.cart i,
 	.mobile_expand_title i {
 		margin-right: 5px;
 	}
+	.menu > ul li:hover .menu_drop{
+		display: block;
+	}
 	.menu_drop {
+		position: absolute;
+		background: #fff;
+		display: none;
 		top: -1px;
 		left: calc(100% + 7px);
 		margin: 0;
@@ -776,7 +785,9 @@ a.cart i,
 			position: static;
 			width: 100%;
 			padding-left: 15px;
-
+		}
+		.menu > ul li:hover .menu_drop{
+			display: none;
 		}
 		.menu_drop:before,
 		.menu_drop:after {

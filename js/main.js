@@ -33,12 +33,12 @@ if($(document).width() > 992)  {
 } 
 else {
 	/*  акордион  */
-	var li = $('.menu > ul li');
+	var li = $('.menu > ul > li');
 	var drop = $('.menu_drop');
+	li.children('a').removeAttr('href');
 	li.click(function(){
 			li.not(this).find(drop).hide();
 			$(this).find(drop).toggle();
-			
 		});
 	/* Показать мобильное меню */
 	var height = $('.header_nav').css('height');
@@ -115,12 +115,3 @@ table.click(function(){
 		});
 	}
 })
-
-
-
-$('.dropdown.keep-open').on({
-    "shown.bs.dropdown": function() { this.closable = false; },
-    "click":             function() { this.closable = true; },
-    "hide.bs.dropdown":  function() { return this.closable; }
-});
-
