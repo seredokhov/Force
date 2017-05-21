@@ -334,10 +334,10 @@ a.cart i,
 		background: url("../images/list-style.png") no-repeat 15px center;
 		padding: 0;
 	}
-	.menu > ul li:hover,
+	/*.menu > ul li:hover,
 	ul.dropdown-menu li:hover {
 		background: url("../images/list-style-active.png") no-repeat 15px center #e3e3e3;
-	}
+	}*/
 	/*.menu > ul > li:hover > .dropdown-menu { 
 		display: block !important;
 	}  */
@@ -541,13 +541,13 @@ a.cart i,
 		cursor: pointer;
 		padding: 5px 0;
 	}
-	#settings .dropdown-menu li:hover {
+	/*#settings .dropdown-menu li:hover {
 		background-color: #ffffff;
-	}
-	#settings .dropdown-menu li:hover span {
+	}*/
+	/*#settings .dropdown-menu li:hover span {
 		color: #ff7300;
 		text-decoration: underline;
-	}
+	}*/
 	#settings .dropdown-menu li span {
 		padding: 5px;
 		padding-left: 30px;

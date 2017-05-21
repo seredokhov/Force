@@ -59,7 +59,7 @@ else {
 		});
 	});
 };
-$('#settings').find('.dropdown-menu').find('li').find('span').unbind('mouseenter mouseleave');
+//$('#settings').find('.dropdown-menu').find('li').find('span').unbind('mouseenter mouseleave');
 /*   Блок settings   */
 $(function() {
 	var li = $('#settings').find('.dropdown-menu').find('li');
