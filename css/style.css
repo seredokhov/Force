@@ -53,13 +53,13 @@ header .container {
 .header_nav li {
 	display: inline-block;
 	position: relative;
+	margin: 0 25px;
 }
 .header_nav > li > a,
 .dropdown-menu li a {
 	color: #747474;
 	text-decoration: none;
 	font-size: 12px;
-	margin: 0 25px;
 }
 .dropdown-menu li a {
 	margin: 0;
@@ -292,7 +292,6 @@ a.cart i,
 	.mobile_wrap {
 		display: block;
 		z-index: 6 !important;
-		opacity: 1 !important;
 
 	}
 	/*Боковое меню*/
@@ -458,6 +457,99 @@ a.cart i,
 		width: 100%;
 		height: auto;
 	}
+	.breadcrumbs,
+	#settings {
+		margin-bottom: 15px;
+		list-style: none;
+		color: #8f8f8f;
+		font-size: 13px;
+	}
+	.breadcrumbs {
+		overflow: hidden;
+	}
+	.breadcrumbs a {
+		color: #ff7300;
+	}
+	.breadcrumbs li {
+		float: left;
+		margin-right: 10px;
+	}
+	.breadcrumbs li:before {
+		content: ">";
+		margin-right: 10px;
+		color: #ff7300;
+	}
+	.breadcrumbs li:first-child:before {
+		display: none;
+	}
+	#settings {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	#settings > li {
+		margin: 0 15px 15px;
+		position: relative;
+	}
+	#settings .button {
+		width: 190px;
+		min-height: 50px;
+		font-weight: bold;
+		font-size: 15px;
+		text-transform: none;
+		padding: 0 5px;
+
+	}
+	#settings .button span {
+		display: block;
+		color: #3b3b3b;
+		font-size: 11px;
+	}
+	
+	#settings .button[aria-expanded="true"] {
+		background: #ff7300;
+		border-color: #e66800;
+	}
+	
+	#settings .dropdown-menu {
+		width: 100%;
+		top: calc(100% + 10px);
+		border: 1px solid #dddddd;
+		z-index: 5;
+	}
+	#settings .dropdown-menu:before,
+	#settings .dropdown-menu:after {
+		content: "";
+		border: 10px solid transparent;	
+		border-bottom-color: #dddddd;
+		position: absolute;
+		bottom: 100%;
+		left: calc(50% - 10px);
+	}
+	#settings .dropdown-menu:after {
+		border-bottom-color: #ffffff;
+		bottom: calc(100% - 1px);
+	}
+	#settings .dropdown-menu li {
+		cursor: pointer;
+		padding: 5px 0;
+	}
+	#settings .dropdown-menu li:hover {
+		background-color: #ffffff;
+	}
+	#settings .dropdown-menu li:hover span {
+		color: #ff7300;
+		text-decoration: underline;
+	}
+	#settings .dropdown-menu li span {
+		padding: 5px;
+		padding-left: 30px;
+	}
+
+
+
 
 	/*   Item-1    */
 	.item_1 {
@@ -590,7 +682,8 @@ a.cart i,
 
 	/*  Медиа запросы  */
 	@media (max-width: 1200px) {
-		.content .item_block {
+		.content .item_block,
+		#settings {
 			justify-content: center;
 		}
 	}
