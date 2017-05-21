@@ -742,7 +742,8 @@ a.cart i,
 	/*  Медиа запросы  */
 	@media (max-width: 1200px) {
 		#settings > li,
-		.item_1 {
+		.item_1,
+		.item_2 {
 			width: 30.3%;
 		}
 	}
@@ -752,8 +753,9 @@ a.cart i,
 			justify-content: center;
 		}
 		#settings > li,
-		.item_1 {
-			width: 60%;
+		.item_1,
+		.item_2 {
+			width: 70%;
 		}
 		#menu_call {
 			display: block;
