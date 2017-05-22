@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<!-- заголовок -->
-	<title>Force Home2</title>
+	<title>Force</title>
 	<!-- Css стили -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">	
 	<link rel="stylesheet" href="css/owl.carousel.css">
@@ -425,91 +425,35 @@
 						<div class="item"><img class="img-responsive" src="images/img1.png" alt="5"></div>
 					</div>
 				</div>
-				<ul class="breadcrumbs">
-					<li><a href="№">Каталог</a></li>
-					<li><span>Баки расширительные</span></li>
-				</ul>
-				<h1>Баки расширительные</h1>
-				<ul id="settings">
-					<li>
-						<button class="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сортировать по:<span>1</span></button>
-						<ul class="dropdown-menu">
-							<li><span>Параметр 1</span></li>
-							<li><span>Параметр 2</span></li>
-							<li><span>Параметр 3</span></li>
-						</ul>
-					</li>
-					<li>
-						<button class="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Группировать по:<span>1</span></button>
-						<ul class="dropdown-menu">
-							<li><span>Параметр 1</span></li>
-							<li><span>Параметр 2</span></li>
-							<li><span>Параметр 3</span></li>
-						</ul>
-					</li>
-					<li>
-						<button class="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Магазины:<span>1</span></button>
-						<ul class="dropdown-menu">
-							<li><span>Параметр 1</span></li>
-							<li><span>Параметр 2</span></li>
-							<li><span>Параметр 3</span></li>
-						</ul>
-					</li>
-					<li>
-						<button class="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наличие:<span>1</span></button>
-						<ul class="dropdown-menu">
-							<li><span>В наличии</span></li>
-							<li><span>Под заказ</span></li>
-						</ul>
-					</li>
-				</ul>
-				<div id="item_block">
-					<article class="item_2 ">
-						<a href="#">
-							<div class="img_item_block">
-								<img class="img-responsive" src="images/item_1.png" alt="item_1">
-							</div>
-							<span class="item_name">Гидроаккумуляторы для водоснабжения</span>
-							<span class="count">15 товаров</span>
-						</a>
-					</article>
-					<article class="item_2 ">
-						<a href="#">
-							<div class="img_item_block">
-								<img class="img-responsive" src="images/item_1.png" alt="item_1">
-							</div>
-							<span class="item_name">Гидроаккумуляторы для водоснабжения</span>
-							<span class="count">15 товаров</span>
-						</a>
-					</article>
-					<article class="item_2 ">
-						<a href="#">
-							<div class="img_item_block">
-								<img class="img-responsive" src="images/item_1.png" alt="item_1">
-							</div>
-							<span class="item_name">Гидроаккумуляторы для водоснабжения</span>
-							<span class="count">15 товаров</span>
-						</a>
-					</article>
-					<article class="item_2 ">
-						<a href="#">
-							<div class="img_item_block">
-								<img class="img-responsive" src="images/item_1.png" alt="item_1">
-							</div>
-							<span class="item_name">Гидроаккумуляторы для водоснабжения</span>
-							<span class="count">15 товаров</span>
-						</a>
-					</article>
-					<article class="item_2 ">
-						<a href="#">
-							<div class="img_item_block">
-								<img class="img-responsive" src="images/item_1.png" alt="item_1">
-							</div>
-							<span class="item_name">Гидроаккумуляторы для водоснабжения</span>
-							<span class="count">15 товаров</span>
-						</a>
-					</article>
-				</div>
+				<h1>Оформление заказа</h1>
+				<form class="order_block">
+					<div class="order_table">
+						<div class="fieldset">
+							<input type="text" class="form half" placeholder="Имя">
+							<input type="text" class="form half" placeholder="Фамилия">
+						</div>
+						<input type="text" class="form" placeholder="Улица, номер дома">
+						<div class="fieldset">
+							<input type="text" class="form half" placeholder="E-mail">
+							<input type="text" class="form half" placeholder="Номер телефона">
+						</div>
+						<label for="list">Способы получения товара</label>
+						<select type="text" class="half" id="list">
+							<option value="1">В магазине</option>
+							<option value="2">На складе</option>
+						</select>
+					</div>
+					<div class="order_descript">
+						<div>
+							<div class="total_count"><span>1</span> товар на сумму</div>
+							<div><span>9 900</span> Р</div>
+							<div class="total_cost">Итого: <span>9 900 Р</span></div>
+						</div>
+					</div>
+					<div class="order_go">
+						<a href="#" class="button orange">Заказать</a>
+					</div>
+				</form>
 			</main>
 		</div>
 	</div>
@@ -560,11 +504,22 @@
 			<div class="copyright">"Компания ФОРС  2012-2017"</div>
 		</div>
 	</footer>
+
+
+
+
+
 	<div id="wrapper"></div>
+
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/main.js"></script>
+
+
 <script>
 	$(document).ready(function() {
 		$("#owl-demo").owlCarousel({
