@@ -136,8 +136,6 @@ $(function() {
 	calc.click(function(){
 		var count = $(this).parent().find('.input').text();
 		var cost = $(this).parent().parent().find('span').attr('data-cost');
-		parseInt(count);
-		parseInt(cost);
 		if($(this).hasClass('plus')) {
 			if(count<10){
 				count++;
@@ -154,4 +152,7 @@ $(function() {
 		total();
 	});
 });
+
+//alert(string.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '));
+
 

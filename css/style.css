@@ -1,3 +1,32 @@
+@font-face {
+	font-family: Proxima Nova Regular;
+	src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular.otf')  format('opentype'),
+		url('../fonts/ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima Nova Semibold;
+	src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Semibold.otf')  format('opentype'),
+		url('../fonts/ProximaNova-Semibold.woff') format('woff'),
+		url('../fonts/ProximaNova-Semibold.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima Nova Light;
+	src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Light.otf')  format('opentype'),
+		url('../fonts/ProximaNova-Light.woff') format('woff'),
+		url('../fonts/ProximaNova-Light.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 * {
 	padding: 0;
 	margin: 0;
@@ -5,7 +34,8 @@
 h1,h2,h3 {
 	margin: 0;
 }
-h1 {
+h1,
+.h1 {
 	font-size: 29px;
 	color: #333333;
 	margin-bottom: 15px;
@@ -267,25 +297,6 @@ a.cart i,
 	left: 0;
 }
 
-
-/*    Под снос    */
-
-/*
-.header_links a.cart:before,
-.header_links a.where:before {
-	content: "";
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	margin-right: 5px;
-	background: url('../images/cart.png') no-repeat center;
-}
-.header_links a.where:before {
-	background-image: url('../images/nav.png');
-}*/
-
-
-
 /*       Центральный блок         */
 	#wrapper {
 		display: none;
@@ -459,7 +470,7 @@ a.cart i,
 
 	/* Контент */
 	.content #item_block,
-	.content .logo_block {
+	.content .logo_block{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
@@ -576,11 +587,90 @@ a.cart i,
 		margin-bottom: 10px;
 	}
 
-	.content p {
+	.content p,
+	.content .list_unstyled {
 		color: #828282;
 		font-family: "Proxima Nova Light";
 		font-size: 13px;
 		margin-bottom: 15px;
+	}
+	.content .list_unstyled,
+	.content .list_unstyled ul {
+		list-style: none;
+	}
+	.owner_foto {
+		padding: 5px;
+		border: 1px solid #dddddd;
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.owner_foto img {
+		
+	}
+	.first_person_block {
+		margin-bottom: 20px;
+		display: flex;
+	}
+	.owner_story {
+		position: relative;
+		padding-left: 15px;
+	}
+	.first_person_block p {
+		margin-bottom: 30px;
+	}
+	.director {
+		position: absolute;
+		left: 15px;
+		bottom: 0;
+		color: #7a7a7a;
+		font-size: 14px;
+		font-family: "Proxima Nova Light";
+	}
+	.director .name {
+		color: #333333;
+		font-size: 18px;
+		font-family: "Proxima Nova Semibold";
+	}
+	.circle_ul {
+		list-style-position: outside;
+		margin-left: 20px;
+		color: #828282;
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.team_group {
+		background: #ffffff;
+		width: 100%;
+		color: #484848;
+		font-size: 16px;
+		font-family: "Proxima Nova Semibold";
+		border-left: 3px solid #ff7300;
+		padding: 10px;
+		margin-bottom: 15px;
+	}
+	.group_photo {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+	.group_photo .worker_photo {
+		padding: 5px;
+		border: 1px solid #dddddd;
+		background: #ffffff;
+	}
+	.group_photo  img {
+		max-width: 100%;
+		border: 1px solid #dddddd;
+
+	}
+	.worker_name {
+		display: block;
+		text-align: center;
+		color: #484848;
+		font-size: 16px;
+		font-family: "Proxima Nova Semibold";
+		padding: 15px 10px;
 	}
 
 
@@ -912,7 +1002,7 @@ a.cart i,
 		width: 100%;
 	}
 	.half {
-		width: 47%;
+		width: 48%;
 	}
 	.order_table > .fieldset {
 		display: flex;
@@ -927,9 +1017,6 @@ a.cart i,
 	::-moz-placeholder          {color:#8e8e8e;}/* Firefox 19+ */
 	:-moz-placeholder           {color:#8e8e8e;}/* Firefox 18- */
 	:-ms-input-placeholder      {color:#8e8e8e;}
-
-
-
 	.order_descript {
 		width: calc(25% - 30px);
 		display: flex;
@@ -947,8 +1034,6 @@ a.cart i,
 		font-family: 'Proxima Nova Semibold';
 		font-size: 21px;
 	}
-
-
 	.order_go {
 		width: calc(25% - 30px);
 		background: none !important;
@@ -957,12 +1042,55 @@ a.cart i,
 		align-items: center;
 		padding: 15px 0;
 	}
-	.order_go a {
+	.order_go input {
 		height: 42px;
 		line-height: 40px;
-		font-family: 'Proxima Nova Bold';
+		font-family: 'Proxima Nova Regular';
+		font-weight: bold;
 		font-size: 14px;
 		text-transform: uppercase;
+	}
+	.map {
+		padding: 5px;
+		background: #ffffff;
+		border: 1px solid #dddddd;
+		margin-bottom: 15px;
+	}
+	.map img {
+		width: 100%;
+		border: 1px solid #dddddd;
+	}
+	.contacts_descript,
+	.place div span {
+		font-size: 14px;
+		color: #333333;
+		font-weight: bold;
+		font-family: 'Proxima Nova Regular';
+	}
+	.contacts_descript {
+		margin-bottom: 15px;
+	}
+	.place div {
+		color: #5a5a5a;
+		font-size: 14px;
+		font-family: 'Proxima Nova Light';
+	}
+	.contacts_gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 5px -1.5%;
+	}
+	.contacts_gallery > div {
+		margin: 1.5%;
+		padding: 5px;
+		background: #ffffff;
+		border: 1px solid #dddddd;
+		max-width: 140px;
+	}
+	.contacts_gallery > div img {
+		border: 1px solid #dddddd;
+		width: 100%;
 	}
 
 
@@ -1094,6 +1222,21 @@ a.cart i,
 		.menu > ul li {
 			overflow: hidden;
 		}
+		.owner_foto {
+			margin-bottom: 20px;
+		}
+		.first_person_block {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.first_person_block p {
+			margin-bottom: 60px;
+		}
+		.group_photo,
+		.contacts_gallery {
+			justify-content: space-around;
+		}
+
 	}
 	@media (max-width: 768px) {
 		.content {
