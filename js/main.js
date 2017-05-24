@@ -153,6 +153,6 @@ $(function() {
 	});
 });
 
-//alert(string.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '));
+//alert(summa.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '));
 
 
