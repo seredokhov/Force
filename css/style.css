@@ -603,9 +603,10 @@ a.cart i,
 		border: 1px solid #dddddd;
 		display: inline-block;
 		margin: 0 auto;
+		background: #ffffff;
 	}
 	.owner_foto img {
-		
+		border: 1px solid #dddddd;
 	}
 	.first_person_block {
 		margin-bottom: 20px;
@@ -651,8 +652,14 @@ a.cart i,
 	.group_photo {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: flex-start;
+		margin-right: -1.5%;
+		margin-left: -1.5%;
 		margin-bottom: 15px;
+	}
+	.group_photo > div {
+		margin: 1.5%;
+		width: 22%;
 	}
 	.group_photo .worker_photo {
 		padding: 5px;
@@ -660,7 +667,7 @@ a.cart i,
 		background: #ffffff;
 	}
 	.group_photo  img {
-		max-width: 100%;
+		width: 100%;
 		border: 1px solid #dddddd;
 
 	}
@@ -1236,7 +1243,6 @@ a.cart i,
 		.contacts_gallery {
 			justify-content: space-around;
 		}
-
 	}
 	@media (max-width: 768px) {
 		.content {
@@ -1253,6 +1259,9 @@ a.cart i,
 		.order_block > div {
 			width: 100%;
 			margin-bottom: 10px;
+		}
+		.group_photo > div {
+			width: 47%;
 		}
 	}
 	@media (max-width: 600px) {
