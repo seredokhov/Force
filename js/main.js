@@ -1,3 +1,4 @@
+
 var $menu = $('.menu');
 var $wrap = $('#wrapper');
 
@@ -137,7 +138,7 @@ $(function() {
 		var count = $(this).parent().find('.input').text();
 		var cost = $(this).parent().parent().find('span').attr('data-cost');
 		if($(this).hasClass('plus')) {
-			if(count<10){
+			if(count<20){
 				count++;
 			}
 		}
@@ -153,6 +154,79 @@ $(function() {
 	});
 });
 
-//alert(summa.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '));
 
+$(function() { // Ждём загрузки страницы
+
+	$(".certificate img").click(function(){	// Событие клика на маленькое изображение
+	  	var img = $(this);	// Получаем изображение, на которое кликнули
+		var src = img.attr('src'); // Достаем из этого изображения путь до картинки
+		$("body").append("<div class='popup'>"+ //Добавляем в тело документа разметку всплывающего окна
+						 "<div class='popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+						 "<img src='"+src+"' class='popup_img' />"+ // Само увеличенное фото
+						 "</div>"); 
+		$(".popup").fadeIn(200); // Медленно выводим изображение
+		$(".popup_bg").click(function(){	// Событие клика на затемненный фон	   
+			$(".popup").fadeOut(200);	// Медленно убираем всплывающее окно
+			setTimeout(function() {	// Выставляем таймер
+			  $(".popup").remove(); // Удаляем разметку всплывающего окна
+			}, 200);
+		});
+	});
+	
+});
+
+
+/*   Галлерея  */
+$(function() {
+	var largeImg = $('.large_photo').find('img');
+	var smallImg = $('.previews .preview img');
+	var largePrev = $('.large_photo').find('.prev');
+	var largeNext = $('.large_photo').find('.next');
+	var images = [];
+	var i = 0
+	smallImg.each(function(){
+	    images.push($(this));
+	})
+	
+	largeNext.click(function(){
+		images[i].parent().removeClass('changed');
+		i++;
+		if(i > images.length- 1) {
+			i=0;
+		}
+		images[i].parent().addClass('changed');
+		var src = images[i].attr('src');
+		largeImg.fadeOut(100, function(){
+			largeImg.attr('src', src)
+		});
+		largeImg.fadeIn(100);
+	})
+	largePrev.click(function(){
+		images[i].parent().removeClass('changed');
+		i--;
+		if(i < 0) {
+			i = images.length- 1;
+		}
+		images[i].parent().addClass('changed');
+		var src = images[i].attr('src');
+		largeImg.fadeOut(100, function(){
+			largeImg.attr('src', src)
+		});
+		largeImg.fadeIn(100);
+
+	})
+	
+	smallImg.click(function() {
+		smallImg.parent().removeClass('changed');
+		$(this).parent().addClass('changed');
+		var src = $(this).attr('src');
+		i = $(this).attr('data-num');
+		largeImg.fadeOut(100, function(){
+			largeImg.attr('src', src)
+		});
+		largeImg.fadeIn(100);
+		
+
+	});
+});
 
