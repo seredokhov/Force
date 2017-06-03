@@ -1209,13 +1209,15 @@ a.cart i,
 		font-size: 14px;
 		text-transform: uppercase;
 	}
-	.map {
+	#map {
+		width: 100%;
+		height: 268px;
 		padding: 5px;
 		background: #ffffff;
 		border: 1px solid #dddddd;
 		margin-bottom: 15px;
 	}
-	.map img {
+	#map img {
 		width: 100%;
 		border: 1px solid #dddddd;
 	}

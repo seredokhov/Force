@@ -420,8 +420,8 @@
 					<li><span>Баки расширительные</span></li>
 				</ul>
 				<h1>Контакты</h1>
-				<div class="map">
-					<img src="images/map.jpg" alt="Карта">
+				<div class="map" id="map">
+					<!--<img src="images/map.jpg" alt="Карта"> -->
 				</div>
 				<div class="contacts_descript">Оптовый отдел (оптовые продажи, комплектация строительных объектов по Республике Башкортостан и России)</div>
 				<div class="place">
@@ -579,5 +579,35 @@
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/main.js"></script>
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script>
+		ymaps.ready(init);
+		function init(){
+			var myMap;
+			myMap = new ymaps.Map("map", {
+				center: [54.776256, 56.077088],
+				zoom: 10,
+				controls: []
+			});
+			myMap.behaviors.disable('scrollZoom');
+			myMap.controls.add("zoomControl", {
+				position: {top: 15, left: 15}
+			});
+			var myPlacemark = new ymaps.Placemark([54.799091, 56.082120] , {},
+				{ iconLayout: 'default#image',
+				iconImageHref: 'images/mark.png',
+				iconImageSize: [60, 60],
+				iconImageOffset: [-30, -60] 
+		 	});
+		 	var myPlacemark2 = new ymaps.Placemark([54.722196, 55.994273] , {},
+				{ iconLayout: 'default#image',
+				iconImageHref: 'images/mark.png',
+				iconImageSize: [60, 60],
+				iconImageOffset: [-30, -60] 
+		 	});
+			myMap.geoObjects.add(myPlacemark);
+			myMap.geoObjects.add(myPlacemark2);
+		}
+	</script>
 </body>
 </html>
