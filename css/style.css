@@ -1819,6 +1819,12 @@ a.cart i,
 		.contacts_gallery {
 			justify-content: space-around;
 		}
+		.customNavigation a.next {
+			right: 0;
+		}
+		.customNavigation a.prev {
+			left: 0;
+		}
 	}
 	@media (max-width: 768px) {
 		.content {
