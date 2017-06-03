@@ -1217,10 +1217,27 @@ a.cart i,
 		border: 1px solid #dddddd;
 		margin-bottom: 15px;
 	}
-	#map img {
+	.popup_map {
 		width: 100%;
-		border: 1px solid #dddddd;
+		color: white;
+		font-family:
+		Verdana; font-size: 10px;
+		line-height: 0.6;
+		text-align: left;
+		padding-left: 15px;
+		padding-top: 15px;
 	}
+	.popup_map img{
+		float: left;
+		margin-right: 15px;
+	}
+	.popup-text {
+		overflow: hidden;
+	}
+	.popup-text p {
+		line-height: 1;
+	}
+
 	.shipping_descript,
 	.contacts_descript,
 	.place div span {

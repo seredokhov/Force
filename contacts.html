@@ -593,20 +593,28 @@
 			myMap.controls.add("zoomControl", {
 				position: {top: 15, left: 15}
 			});
-			var myPlacemark = new ymaps.Placemark([54.799091, 56.082120] , {},
+
+			var myPlacemark = new ymaps.Placemark([54.722196, 55.994273] , {
+				balloonContentBody: "<address><strong>Оптовый отдел</strong><br/>Адрес: Уфа, ул. Трамвайная, 9<br/>Телефон: +7 (347) 2-466-433<br/>Email: opt@fors-tsk.ru</address>"
+			},
 				{ iconLayout: 'default#image',
 				iconImageHref: 'images/mark.png',
 				iconImageSize: [60, 60],
-				iconImageOffset: [-30, -60] 
-		 	});
-		 	var myPlacemark2 = new ymaps.Placemark([54.722196, 55.994273] , {},
+				iconImageOffset: [-30, -60],
+			});
+
+			var myPlacemark2 = new ymaps.Placemark([54.799091, 56.082120] , {
+				balloonContentBody: "<address><strong>Инженерный салон №2</strong><br/>Адрес: Уфа, ул. Губайдуллина, 2к1<br/>Телефон: +7 (347) 285-85-12<br/>Email: es1@fors-tsk.ru</address>"
+			},
 				{ iconLayout: 'default#image',
 				iconImageHref: 'images/mark.png',
 				iconImageSize: [60, 60],
-				iconImageOffset: [-30, -60] 
-		 	});
+				iconImageOffset: [-30, -60],
+			});
+
 			myMap.geoObjects.add(myPlacemark);
 			myMap.geoObjects.add(myPlacemark2);
+
 		}
 	</script>
 </body>
