@@ -1421,12 +1421,11 @@ a.cart i,
 			text-align: center;
 			display: flex;
 			align-items: center;
+			cursor: pointer;
 		}
 		.previews .changed {
 			border: 1px solid #ff7300;
 		}
-
-
 		.preview_control button {
 			font-size: 12px;
 			top: 35%;
@@ -1437,7 +1436,6 @@ a.cart i,
 		.preview_control .next {
 			right: -20px;
 		}
-
 	.tovar_item .in_cart {
 		width: 30%;
 	}
@@ -1445,7 +1443,6 @@ a.cart i,
 			font-size: 24px;
 			color: #333333;
 			display: block;
-			margin-top: 5px;
 		}
 		.tovar_item .stars {
 			color: #c2c2c2;
@@ -1463,11 +1460,10 @@ a.cart i,
 		.cart_item_block .button:after {
 			left: 20px;
 		}
-
 	.tovar_item .more {
 		width: 30%;
-		display: flex;
-		align-items: center;
+		/*display: flex;
+		align-items: center;*/
 	}
 	.tovar_item .more span {
 		display: block;
@@ -1634,11 +1630,6 @@ a.cart i,
 		right: -25px;
 	}
 
-
-
-
-
-
 /*   Рейтинг Звезды (с выделением)   */
 	.stars_change {
 		direction: rtl;
@@ -1653,7 +1644,6 @@ a.cart i,
 	.star-rating__ico {
 		color: #c2c2c2;
 	}
-
 	.star-rating__input{
 		display: none;
 	}
@@ -1670,19 +1660,12 @@ a.cart i,
 
 /*=============*/
 
-
-
-
-
-
-
 	/*  Футер   */
 	footer {
 		margin-top: 45px;
 		padding: 20px 0;
 		background: #dfe4e8;
 	}
-
 	.unstyled_list,
 	.unstyled_list ul {
 		list-style: none;
