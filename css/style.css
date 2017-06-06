@@ -213,6 +213,11 @@ span.gogl {
 	color: #747474;
 	font-size: 11px;
 }
+.header_contacts_block {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}
 
 
 
@@ -223,11 +228,11 @@ span.gogl {
 }
 
 .lower_header .container {
-	min-height: 65px;
+	min-height: 60px;
 }
 .lower_header .container > div {
-	padding-top: 12.5px;
-	padding-bottom: 12.5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .logo {
 	display: block;
