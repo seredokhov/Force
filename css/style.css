@@ -178,23 +178,6 @@ header .container {
 	line-height: 1;
 	margin: 5px 0;
 }
-
-/*
-span.fb {
-	background: url('../images/social.png') 5px 4px no-repeat #eeeeee; 
-}
-span.ok {
-	background: url('../images/social.png') -26px 4px no-repeat #eeeeee; 
-}
-span.twit {
-	background: url('../images/social.png') -56px 4px no-repeat #eeeeee; 
-}
-span.gogl {
-	background: url('../images/social.png') -88px 4px no-repeat #eeeeee; 
-}
-.header_nav {
-	line-height: 54px;
-}*/
 .contacts {
 	padding-top: 7px;
 	padding-bottom: 7px;
@@ -709,9 +692,13 @@ a.cart i,
 		text-decoration: underline;
 	}
 	.warning {
-		text-transform: uppercase;
 		color: #f14242;
-		font-family: "Proxima Nova Light";
+		font-family: "Proxima Nova Semibold";
+	}
+	.bold {
+		color: #454545;
+		font-size: 16px;
+		font-family: "Proxima Nova Semibold";
 	}
 	.card,
 	.contact_phone {
@@ -1365,6 +1352,7 @@ a.cart i,
 		padding: 30px 10px;
 		color: #555555;
 		font-size: 14px;
+		position: relative;
 	}
 
 	.tovar_item .gallery {
@@ -1462,8 +1450,28 @@ a.cart i,
 		}
 	.tovar_item .more {
 		width: 30%;
-		/*display: flex;
-		align-items: center;*/
+		position: relative;
+		padding-top: 10px;
+		display: flex;
+		align-items: center;
+	}
+	.lable_firm {
+		position: absolute;
+		top: 0;
+		right: 70px;
+		transform: translateY(-50%);
+		width: 200px;
+		height: 60px;
+		line-height: 60px;
+		vertical-align: middle;
+		background: #ffffff;
+		border: 1px solid #dddddd;
+		text-align: center;
+		overflow: hidden;
+		border-radius: 4px;
+	}
+	.lable_firm img {
+		max-width: 100%;
 	}
 	.tovar_item .more span {
 		display: block;
@@ -1579,6 +1587,20 @@ a.cart i,
 	.comment .comment_data {
 		font-size: 12px;
 		color: #919191;
+	}
+
+	.comment ul{
+		list-style: none;
+		margin-left: 0;
+		color: #555555;
+		font-size: 13px;
+		margin-bottom: 10px;
+	}
+	.comment .comment_title {
+		display: block;
+		font-size: 15px;
+		color: #121313;
+		margin: 10px 0;
 	}
 	.comment p {
 		color: #555555;
@@ -1714,6 +1736,7 @@ a.cart i,
 		padding: 0;
 		float: none;
 		display: block;
+		margin-bottom: 20px;
 	}
 	.copyright {
 		text-align: center;
@@ -1866,6 +1889,10 @@ a.cart i,
 		.tovar_item > div {
 			width: 100% !important;
 			text-align: center;
+		}
+		.tovar_item .lable_firm {
+			position: static;
+			transform: translateY(0);
 		}
 		.tovar_item .cart_item_block {
 			margin: 10px auto;
